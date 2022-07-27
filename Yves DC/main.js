@@ -2,7 +2,10 @@ var btn0 = document.querySelector('.Send-btn');
 var inputField = document.querySelector('.msg');
 var chatBox = document.querySelector('.messages');
 var People = document.querySelector('.Main .Panel .People');
-
+var fom = document.querySelector('.fom');
+fom.onsubmit = (e) =>{
+	e.preventDefault();
+}
 //Scroll 
 chatBox.onmouseenter = () =>{
 	chatBox.classList.add('active');
@@ -29,10 +32,7 @@ btn0.onclick = () =>{
 }
 //preventing form from submiting
 
-var fom = document.querySelector('.fom');
-fom.onsubmit = (e) =>{
-	e.preventDefault();
-}
+
 //this will run frequently after 500ms
 window.setInterval(() =>{
 	//lets start AJAX
