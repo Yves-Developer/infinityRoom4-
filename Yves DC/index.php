@@ -36,7 +36,7 @@ if(!isset($_SESSION['uniq_id'])){
 			
 			$sql44=mysqli_query($conn,"SELECT * FROM Reg_Log_info WHERE uniq_id ={$user_id}");
 			if(mysqli_num_row($sql44) > 0){
-				$row45=mysqli_fetch_assocc($sql44);
+				$row45=mysqli_fetch_assoc($sql44);
 			}
 			
 			$Receiver_name=$row45['user_name'];
