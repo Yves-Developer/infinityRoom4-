@@ -2,6 +2,14 @@
 ///Ajax Start
 /// sending signUp detail from ajax to php
 // declaration for Signup btn
+
+//preventing form from submiting
+
+var fom = document.querySelector('.fom');
+fom.onsubmit = (e) =>{
+	e.preventDefault();
+}
+
 var btn0 = document.querySelector('.btn');
 //var errText = document.getElementsByClassName('errText');
 btn0.onclick = () =>{
@@ -26,10 +34,4 @@ btn0.onclick = () =>{
 	}
 	let formData = new FormData(fom);
 	xhr.send(formData);
-}
-//preventing form from submiting
-
-var fom = document.querySelector('.fom');
-fom.onsubmit = (e) =>{
-	e.preventDefault();
 }
