@@ -40,7 +40,7 @@ if(!isset($_SESSION['uniq_id'])){
 							
 			</div>
 			<div class="TxTool">
-				<form action="#" class="fom">
+				<form action="" class="fom" enctype="multipart/form-data">
 				<input type="text" name="outgoing_id" value="<?php echo $user_id;?>" hidden>
 				<textarea name="msg" class="msg"></textarea>
 				<input type="submit" value="Send" class="Send-btn">
