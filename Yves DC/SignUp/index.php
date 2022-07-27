@@ -17,7 +17,7 @@
 	<div class="SignUp-Container">
 		<br><br>
 		<h2>Signup To Coderz Hub</h2><br>
-		<form action="#" class="fom">
+		<form action="" class="fom" enctype="multipart/form-data">
 		<p class="errText"></p>
 		<div class="input focus">
 		<input type="text" placeholder="First Name" name="fn">
