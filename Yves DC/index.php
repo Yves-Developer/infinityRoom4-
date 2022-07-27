@@ -33,6 +33,13 @@ if(!isset($_SESSION['uniq_id'])){
 			<?php
 			include_once "./PHP/config.php";
 			$user_id = $_SESSION['uniq_id'];
+			
+			$sql44=mysqli_query($conn,"SELECT * FROM Reg_Log_info WHERE uniq_id ={$user_id}");
+			if(mysqli_num_row($sql44) > 0){
+				$row45=mysqli_fetch_assocc($sql44);
+			}
+			
+			$Receiver_name=$row45['user_name'];
 			?>
 			</p>
 
@@ -42,6 +49,7 @@ if(!isset($_SESSION['uniq_id'])){
 			<div class="TxTool">
 				<form action="" class="fom" enctype="multipart/form-data">
 				<input type="text" name="outgoing_id" value="<?php echo $user_id;?>" hidden>
+				<input type="text" name="Receiver_name" value="<?php echo $Receiver_name;?>" hidden>
 				<textarea name="msg" class="msg"></textarea>
 				<input type="submit" value="Send" class="Send-btn">
 			</form>
