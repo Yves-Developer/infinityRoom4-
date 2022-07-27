@@ -5,6 +5,7 @@ if (isset($_SESSION['uniq_id'])){
     echo "<b style='font-style:italic'>Write your name after writing your message because there many things that are not added on!</b>";
     $output ="";
 	$outgoing_id = mysqli_real_escape_string($conn,$_POST['outgoing_id']);
+	$Receiver_name = mysqli_real_escape_string($conn,$_POST['Receiver_name']);
     $sql = mysqli_query($conn,"SELECT * FROM messages WHERE outgoing_msg_id = {$outgoing_id} AND incoming_msg_id != {$outgoing_id} OR outgoing_msg_id != {$outgoing_id} AND incoming_msg_id = {$outgoing_id}");
     if (mysqli_num_rows($sql) > 0) {
         while ($row = mysqli_fetch_assoc($sql)) { 
@@ -15,7 +16,7 @@ if (isset($_SESSION['uniq_id'])){
         }
         else {##### Receiver
 
-        $output .="<div class='message other-message'><p><b></b>".$row['msg']."</p></div>";
+        $output .="<div class='message other-message'><p><b>".$Receiver_name."</b>".$row['msg']."</p></div>";
 
         }
     }
