@@ -22,7 +22,7 @@
 		</div>			
 		</center>
 		<h2>Login Here.</h2><br>
-		<form action="#" class="fom">
+		<form action="" class="fom" enctype="multipart/form-data">
 		<div class="input" id="id0">
 			<h5>User Name</h5>
 			<input type="text" id="input0" name="un">
