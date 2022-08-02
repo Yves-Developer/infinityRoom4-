@@ -38,7 +38,7 @@
 	</center>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<!-- code blocks -->
 	<script type="text/javascript" src="./FocusStyle.js"></script>
 	<script type="text/javascript" src="./Login1.js"></script>
 </body>
